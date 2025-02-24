@@ -11,14 +11,13 @@ mongoose.connect(`mongodb+srv://akmalmorsyy:${process.env.MONGO_PASSWORD}@cluste
 .then(()=>{
     console.log('connected to database.')
     //server.listen(5000, ()=>{console.log('server is running on port 5000')})
-    module.exports = server
 })
 .catch((err)=>{console.error(err)})
 
 server.use(express.json())
 server.use(
     cors({
-        origin: "https://akmalkimo.github.io/nicetodolist/",
+        origin: "https://akmalkimo.github.io/nicetodolist",
     })
 )
 
@@ -130,3 +129,5 @@ server.post("/login", async (req,res)=>{
         res.status(500).end()
     }
 })
+
+module.exports = server
