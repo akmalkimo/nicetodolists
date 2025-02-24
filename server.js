@@ -94,7 +94,7 @@ server.post("/sign-up", async (req,res)=>{
     try{
         if(req.body.password === '' || null) return res.status(400).end("invalid password")
         if(req.body.email === '' || null) return res.status(400).end("invalid email")
-        if(req.body.email.includes("@")) return res.status(400).end("invalid emails")
+        if(req.body.email.includes("@") === false) return res.status(400).end("invalid emails")
 
         const password = await bcrypt.hash(req.body.password, 10)
         const user = new User({
