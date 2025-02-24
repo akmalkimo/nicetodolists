@@ -17,7 +17,7 @@ mongoose.connect(`mongodb+srv://akmalmorsyy:${process.env.MONGO_PASSWORD}@cluste
 server.use(express.json())
 server.use(
     cors({
-        origin: "https://akmalkimo.github.io/nicetodolist",
+        origin: "https://akmalkimo.github.io",
     })
 )
 
