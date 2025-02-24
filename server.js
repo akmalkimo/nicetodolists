@@ -10,7 +10,8 @@ const env = require('dotenv').config()
 mongoose.connect(`mongodb+srv://akmalmorsyy:${process.env.MONGO_PASSWORD}@cluster0.cgltk.mongodb.net/toDoList?retryWrites=true&w=majority&appName=Cluster0`)
 .then(()=>{
     console.log('connected to database.')
-    server.listen(5000, ()=>{console.log('server is running on port 5000')})
+    //server.listen(5000, ()=>{console.log('server is running on port 5000')})
+    module.exports = server
 })
 .catch((err)=>{console.error(err)})
 
