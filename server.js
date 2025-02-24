@@ -18,6 +18,7 @@ server.use(express.json())
 server.use(
     cors({
         origin: "https://akmalkimo.github.io",
+        methods: "GET,POST,PUT,DELETE"
     })
 )
 
